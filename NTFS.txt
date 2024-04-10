@@ -1,0 +1,43 @@
+Open Command Prompt as Administrator:
+
+Press Windows Key.
+Type cmd.
+Right-click on "Command Prompt" in the search results.
+Select "Run as administrator".
+Identify the Drive:
+
+Type diskpart and press Enter.
+Then type list disk and press Enter.
+This will display a list of all the disks connected to your computer.
+Select the Bootable Flash Drive:
+
+Identify your bootable flash drive based on its size.
+Type select disk X (replace X with the disk number of your flash drive) and press Enter.
+Clean the Drive:
+
+Type clean and press Enter.
+This command will remove all partitions and volumes from the selected disk.
+Create a New Partition:
+
+Type create partition primary and press Enter.
+This will create a new primary partition on the disk.
+Select the Partition:
+
+Type select partition 1 and press Enter.
+This will select the partition you just created.
+Format the Partition:
+
+Type format fs=ntfs quick and press Enter.
+This command will format the selected partition with the NTFS file system.
+The "quick" parameter makes the format process faster by skipping the disk checking for bad sectors.
+Assign a Drive Letter (Optional):
+
+Type assign letter=X (replace X with the desired drive letter) and press Enter.
+This will assign a drive letter to the newly formatted partition.
+Exit DiskPart:
+
+Type exit and press Enter to exit the DiskPart utility.
+Close Command Prompt:
+
+Type exit and press Enter to close the Command Prompt window.
+Your bootable flash drive should now be formatted with the NTFS file system. Make sure to safely eject the flash drive from your computer before removing it.
